@@ -1,0 +1,21 @@
+{% extends 'basic_app/base.html' %}
+
+
+{% block body_block %}
+<title>Login page</title>
+<p>Please login!</p>
+
+<!--<form action="/action_page.php">   normal form action looks like this in html -->
+<!--<li><a class="navbar-link" href="{% url 'basic_app123:other_name' %">OTHER PAGE</a> </li>  learning templates wale project me aise hyperlink banate the...par yah ek endpoint ko data bhejna ja...so action use hoga-->
+ <form method="POST" action= "{% url "basic_app123:login_view_pattern_name" %}">
+     {% csrf_token %}
+     <label for="usernameee">USER KA NAAM??  </label>
+     <input type="text" name="usernameee">
+     <br>
+     <label for="passworddd">PASSWORD??????</label>
+     <input type="text" name="passworddd">
+
+     <input type="submit" value="submit it">
+ </form>
+
+{% endblock %}

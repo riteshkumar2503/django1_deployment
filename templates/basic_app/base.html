@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!--    <title>BASE</title>-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li><a class="navbar-brand" href="{% url 'index_view_pattern_name' %}">HOMEPAGE</a> </li>
+                <li><a class="navbar-link" href="{% url 'admin:index' %}">ADMIN PAGE</a> </li>
+                <li><a class="navbar-link" href="{% url 'basic_app123:register_view_pattern_name' %}">REGISTER PAGE</a> </li>
+                {% if user.is_authenticated %} <!-- (yaha user123.is_authenticated nahi hoga unlike view....html template ke andar "user" inbuilt name hai by default),so user.is_authenticated hoga ....user is automatically passed back to the backend using Django and its decorators-->
+                    <li><a class="navbar-link" href="{% url 'logout_view_pattern_name' %}">LOGOUT</a> </li>
+                {% else %}
+                    <li><a class="navbar-link" href="{% url 'basic_app123:login_view_pattern_name' %}">LOGIN</a> </li>
+                {% endif %}
+
+            </ul>
+        </div>
+    </nav>
+
+        {% block body_block %}
+        <p>hello, this part of base page won't be inherited by others</p>
+        {% endblock %}
+
+
+</body>
+</html>
