@@ -9,7 +9,7 @@ class FormByUsingInbuiltUserModel(forms.ModelForm):
     class Meta():
         model = User  # ye wala to inbuilt model hai
         fields = ('username', 'email', 'password')
-        # fields = "__all__"  # agar saare fields chahiye to
+        # fields = "__all__"  #  agar saare fields chahiye to
 
 
 # doosra wala form jisme extra parameters hai wo CREATED model se bana liya..par take note ki while creating the doosra model, usko link kar diya hai inbuilt wale model se, by using user_again = models.OneToOneField(User)
