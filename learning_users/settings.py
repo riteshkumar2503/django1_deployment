@@ -29,7 +29,8 @@ SECRET_KEY = '&07fy8liwd5%evga%9ud)=_#%@3a4io5==a0#$c@ugcun0v1du'
 DEBUG = True
 
 # ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['127.0.0.1','18.119.101.219'] # first to localhost hai aur doosra apna aws wala instance hai
+# ALLOWED_HOSTS = ['127.0.0.1','18.119.101.219'] # first to localhost hai aur doosra apna aws wala instance hai
+ALLOWED_HOSTS = ["*"]  # any  ip  dene ke liye ye karna hai
 
 
 # Application definition
