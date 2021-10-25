@@ -28,7 +28,8 @@ SECRET_KEY = '&07fy8liwd5%evga%9ud)=_#%@3a4io5==a0#$c@ugcun0v1du'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1','192.0.2.143'] # first to localhost hai aur doosra apna aws wala instance hai
 
 
 # Application definition
