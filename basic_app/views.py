@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from basic_app.forms import FormByUsingInbuiltUserModel, FormToAddStuffNotThereInTheInbuiltOne
 
-from django.core.urlresolvers import reverse
+# from django.core.urlresolvers import reverse
+from django.urls import reverse
+
 from django.contrib.auth.decorators import login_required
 # login_required() does the following:
 # 1. If the user isn't logged in, redirect to "settings.LOGIN_URL", passing the current absolute path in a query string parameter called "next".
